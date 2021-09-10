@@ -9,13 +9,16 @@ function mostrarResultado(bbinario){
     
     var result = calculaBinario(bbinario);
 
-    // let elBinario = document.getElementById("saidaBinario");
-    // elBinario.innerHTML = bbinario;
-    
+    //validação se número é binario.
+    if (isNaN(result)){
+        alert("Insira um numero binario");
+    }else{
+        //calculo
 
-    //calculo
-    let elResult = document.getElementById("result");
-    elResult.innerHTML = `<h4> Resultado: ${result}</h4>`;
+        let elResult = document.getElementById("result");
+        elResult.innerHTML = `<h4> Resultado: ${result}</h4>`;
+        console.log(result);
+    }
 }
 
 function leDados(){
